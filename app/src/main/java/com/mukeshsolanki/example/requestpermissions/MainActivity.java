@@ -12,18 +12,18 @@ public class MainActivity extends AppCompatActivity {
   public static final String[] PERMISSIONS = {
       Manifest.permission.READ_PHONE_STATE, Manifest.permission.RECEIVE_SMS, Manifest.permission.READ_SMS, Manifest.permission.WRITE_EXTERNAL_STORAGE
   };
-  private int mResponseCode = 100;
+  private int mRequestCode = 100;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     RuntimePermission runtimePermission = new RuntimePermission();
-    runtimePermission.requestPermissions(this, PERMISSIONS, mResponseCode);
+    runtimePermission.requestPermissions(this, PERMISSIONS, mRequestCode);
   }
 
   @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
     super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    if (requestCode == mResponseCode) {
+    if (requestCode == mRequestCode) {
       for (int grantResult : grantResults) {
         if (grantResult == PackageManager.PERMISSION_DENIED) {
           Log.d("PermissionResult=>", "Denied");
