@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 ext {
   bintrayRepo = 'maven'
-  bintrayName = 'Runtime-Permissions'
+  bintrayName = 'Runtime-Permissions-Android'
 
   publishedGroupId = 'com.mukesh'
   libraryName = 'permissions'
@@ -9,8 +9,8 @@ ext {
 
   libraryDescription = 'A simple library that will remove all the boilerplate code and speed up your work with new Runtime Permissions introduced in Android M.'
 
-  siteUrl = 'https://github.com/mukeshsolanki/runtime-permissions-example'
-  gitUrl = 'https://github.com/mukeshsolanki/runtime-permissions-example.git'
+  siteUrl = 'https://github.com/mukeshsolanki/App-Runtime-Permissions-Android'
+  gitUrl = 'https://github.com/mukeshsolanki/App-Runtime-Permissions-Android.git'
 
   libraryVersion = '1.0.0'
 
