@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
-import mukesh.com.permissions.AppPermissions;
+import com.mukesh.permissions.AppPermissions;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

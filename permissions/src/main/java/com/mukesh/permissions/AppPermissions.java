@@ -1,4 +1,4 @@
-package mukesh.com.permissions;
+package com.mukesh.permissions;
 
 import android.app.Activity;
 import android.content.pm.PackageManager;
