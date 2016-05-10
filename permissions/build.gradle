@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+ext {
+  bintrayRepo = 'maven'
+  bintrayName = 'Runtime-Permissions'
+
+  publishedGroupId = 'com.mukesh'
+  libraryName = 'permissions'
+  artifact = 'permissions'
+
+  libraryDescription = 'A simple library that will remove all the boilerplate code and speed up your work with new Runtime Permissions introduced in Android M.'
+
+  siteUrl = 'https://github.com/mukeshsolanki/runtime-permissions-example'
+  gitUrl = 'https://github.com/mukeshsolanki/runtime-permissions-example.git'
+
+  libraryVersion = '1.0.0'
+
+  developerId = 'mukeshsolanki'
+  developerName = 'Mukesh Solanki'
+  developerEmail = 'themukeshsolanki@gmail.com'
+
+  licenseName = 'The Apache Software License, Version 2.0'
+  licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+  allLicenses = ["Apache-2.0"]
+}
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion "23.0.3"
+
+  defaultConfig {
+    minSdkVersion 23
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile 'com.android.support:appcompat-v7:23.3.0'
+}
+
+apply from: 'https://raw.githubusercontent.com/mukeshsolanki/library-distribution-tasks/master/install-task.gradle'
+apply from: 'https://raw.githubusercontent.com/mukeshsolanki/library-distribution-tasks/master/bintray-upload-tasks.gradle'
