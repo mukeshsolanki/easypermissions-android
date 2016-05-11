@@ -12,7 +12,7 @@ ext {
   siteUrl = 'https://github.com/mukeshsolanki/App-Runtime-Permissions-Android'
   gitUrl = 'https://github.com/mukeshsolanki/App-Runtime-Permissions-Android.git'
 
-  libraryVersion = '1.0.1'
+  libraryVersion = '1.0.2'
 
   developerId = 'mukeshsolanki'
   developerName = 'Mukesh Solanki'
@@ -28,10 +28,10 @@ android {
   buildToolsVersion "23.0.3"
 
   defaultConfig {
-    minSdkVersion 23
+    minSdkVersion 9
     targetSdkVersion 23
     versionCode 1
-    versionName "1.0.1"
+    versionName "1.0.2"
   }
   buildTypes {
     release {
