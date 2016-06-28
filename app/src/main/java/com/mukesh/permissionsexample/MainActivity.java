@@ -8,9 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import com.mukesh.permissions.AppPermissions;
 import java.util.ArrayList;
 import java.util.List;
-import com.mukesh.permissions.AppPermissions;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    mRuntimePermission = new AppPermissions();
+    mRuntimePermission = new AppPermissions(this);
     initializeUI();
     setListener();
   }
@@ -89,26 +89,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   @Override public void onClick(View v) {
     if (v == mCameraButton) {
-      if (mRuntimePermission.hasPermission(this, Manifest.permission.CAMERA)) {
+      if (mRuntimePermission.hasPermission(Manifest.permission.CAMERA)) {
         Toast.makeText(this, "Camera permission already given", Toast.LENGTH_SHORT).show();
       } else {
-        mRuntimePermission.requestPermission(this, Manifest.permission.CAMERA, CAMERA_REQUEST_CODE);
+        mRuntimePermission.requestPermission(Manifest.permission.CAMERA, CAMERA_REQUEST_CODE);
       }
     } else if (v == mStorageButton) {
-      if (mRuntimePermission.hasPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+      if (mRuntimePermission.hasPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
         Toast.makeText(this, "Storage permission already given", Toast.LENGTH_SHORT).show();
       } else {
-        mRuntimePermission.requestPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        mRuntimePermission.requestPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE,
             STORAGE_REQUEST_CODE);
       }
     } else if (v == mSmsButton) {
-      if (mRuntimePermission.hasPermission(this, Manifest.permission.READ_SMS)) {
+      if (mRuntimePermission.hasPermission(Manifest.permission.READ_SMS)) {
         Toast.makeText(this, "SMS permission already given", Toast.LENGTH_SHORT).show();
       } else {
-        mRuntimePermission.requestPermission(this, Manifest.permission.READ_SMS, SMS_REQUEST_CODE);
+        mRuntimePermission.requestPermission(Manifest.permission.READ_SMS, SMS_REQUEST_CODE);
       }
     } else if (v == mAllButton) {
-      if (mRuntimePermission.hasPermission(this, ALL_PERMISSIONS)) {
+      if (mRuntimePermission.hasPermission(ALL_PERMISSIONS)) {
         Toast.makeText(this, "All permission already given", Toast.LENGTH_SHORT).show();
       } else {
         mRuntimePermission.requestPermission(this, ALL_PERMISSIONS, ALL_REQUEST_CODE);
