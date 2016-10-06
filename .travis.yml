@@ -4,7 +4,7 @@ jdk: oraclejdk8
 android:
   components:
     - build-tools-23.0.3
-    - android-24
+    - android-23
     - extra-android-support
     - extra-google-m2repository
     - extra-android-m2repository
