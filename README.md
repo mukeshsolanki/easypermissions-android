@@ -1,7 +1,15 @@
-[ ![Download](https://api.bintray.com/packages/mukeshsolanki/maven/Runtime-Permissions-Android/images/download.svg) ](https://bintray.com/mukeshsolanki/maven/Runtime-Permissions-Android/_latestVersion)
-[ ![PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg) ](https://www.paypal.me/mukeshsolanki)
-# Runtime Permission Library (Example)
-A simple library that will remove all the boilerplate code and speed up your work with new Runtime Permissions introduced in Android M.
+<h1 align="center">Runtime Permission Library(Android)
+
+<p align="center">
+  [ ![Download](https://api.bintray.com/packages/mukeshsolanki/maven/Runtime-Permissions-Android/images/download.svg) ](https://bintray.com/mukeshsolanki/maven/Runtime-Permissions-Android/_latestVersion)
+  [ ![PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg) ](https://www.paypal.me/mukeshsolanki)
+  [![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=9)
+  [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-App--Runtime--Permissions--Android-brightgreen.svg?style=flat)](http://android-arsenal.com/details/3/3790)
+  Close
+</p>
+
+<p align="center">A simple library that will remove all the boilerplate code and speed up your work with new Runtime Permissions introduced in Android M.</p>
+
 ## What are Runtime Permissions?
 
 <img src="http://openattitude.com/wp-content/uploads/2015/06/m-permissions-03-location.png" width="500" height="839" />
@@ -13,7 +21,7 @@ Integrating the library into you app is extremely easy. A few changes in the bui
 .....
 dependencies {
   ...
-  compile 'com.mukesh:permissions:1.0.3'
+  compile 'com.mukesh:permissions:1.0.4'
 }
 ```
 
