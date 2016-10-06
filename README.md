@@ -1,4 +1,5 @@
 [ ![Download](https://api.bintray.com/packages/mukeshsolanki/maven/Runtime-Permissions-Android/images/download.svg) ](https://bintray.com/mukeshsolanki/maven/Runtime-Permissions-Android/_latestVersion)
+[ ![PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg) ](https://www.paypal.me/mukeshsolanki)
 # Runtime Permission Library (Example)
 A simple library that will remove all the boilerplate code and speed up your work with new Runtime Permissions introduced in Android M.
 ## What are Runtime Permissions?
