@@ -1,9 +1,9 @@
-<h1 align="center">Runtime Permission Library(Android)
+<h1 align="center">Runtime Permission Library(Android)</h1>
 
   [ ![Download](https://api.bintray.com/packages/mukeshsolanki/maven/Runtime-Permissions-Android/images/download.svg) ](https://bintray.com/mukeshsolanki/maven/Runtime-Permissions-Android/_latestVersion)
   [![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=9)
-  [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-App--Runtime--Permissions--Android-brightgreen.svg?style=flat)](http://android-arsenal.com/details/3/3790)
   [![](https://jitpack.io/v/mukeshsolanki/App-Runtime-Permissions-Android.svg)](https://jitpack.io/#mukeshsolanki/App-Runtime-Permissions-Android)
+  [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-App--Runtime--Permissions--Android-brightgreen.svg?style=flat)](http://android-arsenal.com/details/3/3790)
   [![Build Status](https://travis-ci.org/mukeshsolanki/App-Runtime-Permissions-Android.svg?branch=master)](https://travis-ci.org/mukeshsolanki/App-Runtime-Permissions-Android)
   [ ![PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg) ](https://www.paypal.me/mukeshsolanki)
 
