@@ -1,28 +1,23 @@
 language: android
 jdk: oraclejdk8
-
 android:
   components:
-    - platform-tools
-    - tools
-    - build-tools-24.0.3
-    - android-24
-    - extra-android-support
-    - extra-google-m2repository
-    - extra-android-m2repository
+  - platform-tools
+  - tools
+  - build-tools-24.0.3
+  - android-24
+  - extra-android-support
+  - extra-google-m2repository
+  - extra-android-m2repository
   licenses:
-    - '.+'
-
+  - ".+"
 before_script:
-  - echo yes | android update sdk --no-ui --all --filter platform-tools,tools
-  - echo yes | android update sdk --no-ui --all --filter build-tools-24.0.3
-  - echo yes | android update sdk --no-ui --all --filter android-24
-
+- echo yes | android update sdk --no-ui --all --filter platform-tools,tools
+- echo yes | android update sdk --no-ui --all --filter build-tools-24.0.3
+- echo yes | android update sdk --no-ui --all --filter android-24
 script:
-    - ./gradlew clean test
-    
-notifications:
-    email: false
-
+- "./gradlew clean test"
 notifications:
   email: false
+  slack:
+    secure: A5fvd7RPR2qapU92pN03iYbzIeCHnnS2gNOfNGcquYhHgXTPXY7ZVcMdPKNSqP68DyEReOcUx4P6GS2xAF2Xz//ZaPXs73AWnjxQTjiJEQ66Nx4QffuT1JAtQrLHJ6Oi6Kki3LDxNpa8GQoffyKGAr1xfZ+7TssQeLbygnXze7cFkMhixxkJl81qQvpwoey4q8rkLdEoQUA6gjbwmYQJ6A+2G4LQuYVM8QkCbLlKzuM6z44BIsZJM0+edebWCuuw0QKcULYy4zPEIvziH1a+Z/iJCORjljiulOFy6FowBhyDefWUnsZCUDz/Jsfikp989jiwfnvEOCvfhQcmnfv/KAhSPr6ZCOypRRn5LGuVfPXUynWVzuyydc6Jer6+gJgHK4O4AXgCe7KbHDRUgc2QNMIJmuhE2os+t4Zcoy++O+glFZbL/Tgy5utfQwyCpRXlJhkWV6fhSFp/iCjfdtEYZ5O5OJZBb659FAkocSRuiXe8aGiIu91vMsEGLhKyftxQEPQeQHTEZo/0vxl/UWnK+L2RaetCoepA7LqfVdhe+OqUNZzlq7kBVUyhGyRaqBwMU99HfSBkcWmZR3aZeavFczBYGZRpyiXAlshIKqCVw8nT1++WqgSuSWInJzFgIgeFA6k4QeS0F84IOkdTv1I9A0ZAkIV5Fq17mNkCLuVWJaM=
