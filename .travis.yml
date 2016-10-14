@@ -23,3 +23,6 @@ script:
     
 notifications:
     email: false
+
+notifications:
+  email: false
