@@ -1,6 +1,6 @@
 <h1 align="center">Runtime Permission Library(Android)</h1>
 <p align="center">
-  <a href="https://android-arsenal.com/api?level=9"> <img src="https://img.shields.io/badge/API-9%2B-blue.svg?style=flat" /></a>
+  <a href="https://android-arsenal.com/api?level=9"> <img src="https://img.shields.io/badge/API-14%2B-blue.svg?style=flat" /></a>
   <a href="https://jitpack.io/#mukeshsolanki/App-Runtime-Permissions-Android"> <img src="https://jitpack.io/v/mukeshsolanki/App-Runtime-Permissions-Android.svg" /></a>
   <a href="http://android-arsenal.com/details/3/3790"> <img src="https://img.shields.io/badge/Android%20Arsenal-App--Runtime--Permissions--Android-brightgreen.svg?style=flat" /></a>
   <a href="https://travis-ci.org/mukeshsolanki/App-Runtime-Permissions-Android.svg?branch=master"> <img src="https://travis-ci.org/mukeshsolanki/App-Runtime-Permissions-Android.svg?branch=master" /></a>
@@ -18,7 +18,7 @@ Integrating the library into you app is extremely easy. A few changes in the bui
 .....
 dependencies {
   ...
-  compile 'com.mukesh:permissions:1.0.5'
+  compile 'com.mukesh:permissions:<latest-version>'
 }
 ```
 
