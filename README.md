@@ -14,11 +14,21 @@
 Google docs is [here](https://developer.android.com/preview/features/runtime-permissions.html). Unlike the traditional way of asking permission Android M increased its security by enforcing apps to ask permissions on the fly as and when the user requests for a feature that requires those permissions. These permissions can also be revoked by the user at any time.
 ## How to integrate into your app?
 Integrating the library into you app is extremely easy. A few changes in the build gradle and your all ready to user Runtime permissions library. Make the following changes to build.gradle inside you app.
+
+Step 1. Add the JitPack repository to your build file. Add it in your root build.gradle at the end of repositories:
+
 ```java
-.....
+allprojects {
+  repositories {
+    ...
+    maven { url "https://jitpack.io" }
+  }
+}
+```
+Step 2. Add the dependency
+```java
 dependencies {
-  ...
-  compile 'com.mukesh:permissions:<latest-version>'
+        implementation 'com.github.mukeshsolanki:App-Runtime-Permissions-Android:<latest-version>'
 }
 ```
 
