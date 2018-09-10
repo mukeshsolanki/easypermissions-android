@@ -1,13 +1,20 @@
 <h1 align="center">Runtime Permission Library(Android)</h1>
 <p align="center">
-  <a href="https://jitpack.io/#mukeshsolanki/App-Runtime-Permissions-Android"><img src="https://jitpack.io/v/mukeshsolanki/App-Runtime-Permissions-Android/month.svg"/></a>
-  <a href="https://android-arsenal.com/api?level=9"> <img src="https://img.shields.io/badge/API-14%2B-blue.svg?style=flat" /></a>
-  <a href="https://jitpack.io/#mukeshsolanki/App-Runtime-Permissions-Android"> <img src="https://jitpack.io/v/mukeshsolanki/App-Runtime-Permissions-Android.svg" /></a>
-  <a href="http://android-arsenal.com/details/3/3790"> <img src="https://img.shields.io/badge/Android%20Arsenal-App--Runtime--Permissions--Android-brightgreen.svg?style=flat" /></a>
-  <a href="https://travis-ci.org/mukeshsolanki/App-Runtime-Permissions-Android.svg?branch=master"> <img src="https://travis-ci.org/mukeshsolanki/App-Runtime-Permissions-Android.svg?branch=master" /></a>
+  <a class="badge-align" href="https://www.codacy.com/app/mukeshsolanki/easypermissions-android?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mukeshsolanki/easypermissions-android&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/dd28ce7f922d4ad290c804283917f89d"/></a>
+  <a href="https://jitpack.io/#mukeshsolanki/easypermissions-android"> <img src="https://jitpack.io/v/mukeshsolanki/easypermissions-android.svg" /></a>
+  <a href="https://circleci.com/gh/mukeshsolanki/easypermissions-android/tree/master"> <img src="https://circleci.com/gh/mukeshsolanki/easypermissions-android/tree/master.svg?style=shield" /></a>
   <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
-  <a href="https://www.paypal.me/mukeshsolanki"> <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" /></a>
   <br /><br />A simple library that will remove all the boilerplate code and speed up your work with new Runtime Permissions introduced in Android M.
+
+
+# Supporting Android Easy Permissions
+
+Android Easy Permissions is an independent project with ongoing development and support made possible thanks to donations made by [these awesome backers](BACKERS.md#sponsors). If you'd like to join them, please consider:
+
+- [Become a backer or sponsor on Patreon](https://www.patreon.com/mukeshsolanki).
+- [One-time donation via PayPal](https://www.paypal.me/mukeshsolanki)
+
+<a href="https://www.patreon.com/bePatron?c=935498" alt="Become a Patron"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" /></a>
 
 ## What are Runtime Permissions?
 
@@ -30,7 +37,7 @@ allprojects {
 Step 2. Add the dependency
 ```java
 dependencies {
-        implementation 'com.github.mukeshsolanki:App-Runtime-Permissions-Android:<latest-version>'
+        implementation 'com.github.mukeshsolanki:easypermissions-android:<latest-version>'
 }
 ```
 
@@ -38,35 +45,31 @@ dependencies {
 Okay seems like you integrated the library in your project but **how do you use it**? Well its really easy just follow the steps below.
 
 ```
- AppPermissions runtimePermission = new AppPermissions(Activity currentActivity);
+ EasyPermissions easyPermissions =  new EasyPermissions.Builder()
+                                           .with(this) //Activity
+                                           .listener(
+                                               new OnPermissionListener() {
+                                                 @Override public void onAllPermissionsGranted(@NonNull List<String> permissions) {
+                                                    // Triggered if all permissions were given
+                                                 }
+
+                                                 @Override public void onPermissionsGranted(@NonNull List<String> permissions) {
+                                                    // Lists all the permissions that were granted
+                                                 }
+
+                                                 @Override public void onPermissionsDenied(@NonNull List<String> permissions) {
+                                                    // Lists all the permissions that were denied
+                                                 }
+                                               })
+                                           .build();
 ```
-This will create an object of the Runtime Permission class for you. Make sure it's an object of **com.mukesh.permissions.AppPermissions**
-To check if the app has a specific permission you can call `runtimePermission.hasPermission(String permission);` or if you want to check 
-whether the app has multiple permission you can call `runtimePermission.hasPermission(String[] permissions)`.
-
-<img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*DJTWuO_J8QxKciSAjFWQCg.png" width="400" height="250" />
-
-or like how google requests for multiple permissions
-
-<img src="http://pic.youmobile.org/imgcdn/App-permissions-coming-in-Android-M.jpg" />
-
-You can request for a permission by calling `runtimePermission.requestPermission(String permission, int requestCode)` or request multiple 
-permissions by calling `runtimePermission.requestPermission(String[] permissions, int requestCode)`. However you will need to override a 
-method on your activity inorder to wait for a callback from the library. Just add this to you activity.
+This will create an object of the Runtime Permission class for you. To check if the app has a specific permission you can call `easyPermissions.hasPermission(String permission);` or if you want to check
+whether the app has multiple permission you can call `runtimePermission.hasPermission(String[] permissions)`. To request a permission at run time all you need to do is call `easyPermissions.request(String permission)` or if you want to request multiple permissions at the same time you call `easyPermissions.request(String[] permissions)`. However you will need to override a method on your activity inorder to wait for a callback from the library. Just add this to you activity.
 
 ```
 @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
     super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    if (requestCode == mRequestCode) { //The request code you passed along with the request.
-    //grantResults holds a list of all the results for the permissions requested.
-      for (int grantResult : grantResults) {
-        if (grantResult == PackageManager.PERMISSION_DENIED) {
-          Log.d("PermissionResult=>", "Denied");
-          return;
-        }
-      }
-      Log.d("PermissionResult=>", "All Permissions Granted");
-    }
+    easyPermissions.onRequestPermissionsResult(permissions, grantResults);
   }
 ```
 
