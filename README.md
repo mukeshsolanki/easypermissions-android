@@ -18,7 +18,7 @@ Android Easy Permissions is an independent project with ongoing development and 
 
 ## What are Runtime Permissions?
 
-<img src="http://openattitude.com/wp-content/uploads/2015/06/m-permissions-03-location.png" width="500" height="839" />
+<img src="https://github.com/mukeshsolanki/easypermissions-android/blob/master/screenshot/android-working-with-marshmallow-permissions.png?raw=true" />
 
 Google docs is [here](https://developer.android.com/preview/features/runtime-permissions.html). Unlike the traditional way of asking permission Android M increased its security by enforcing apps to ask permissions on the fly as and when the user requests for a feature that requires those permissions. These permissions can also be revoked by the user at any time.
 ## How to integrate into your app?
