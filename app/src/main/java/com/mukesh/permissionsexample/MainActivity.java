@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.mukesh.permissions.EasyPermissions;
 import com.mukesh.permissions.OnPermissionListener;
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -71,14 +70,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   }
 
   @Override public void onClick(View v) {
-    if (v == mCameraButton) {
+    if (v.equals(mCameraButton)) {
       if (permissions.hasPermission(Manifest.permission.CAMERA)) {
         Toast.makeText(MainActivity.this, Manifest.permission.CAMERA + " already granted",
             Toast.LENGTH_SHORT).show();
       } else {
         permissions.request(Manifest.permission.CAMERA);
       }
-    } else if (v == mStorageButton) {
+    } else if (v.equals(mStorageButton)) {
       if (permissions.hasPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
         Toast.makeText(MainActivity.this,
             Manifest.permission.WRITE_EXTERNAL_STORAGE + " already granted",
@@ -86,14 +85,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       } else {
         permissions.request(Manifest.permission.WRITE_EXTERNAL_STORAGE);
       }
-    } else if (v == mSmsButton) {
+    } else if (v.equals(mSmsButton)) {
       if (permissions.hasPermission(Manifest.permission.READ_SMS)) {
         Toast.makeText(MainActivity.this, Manifest.permission.READ_SMS + " already granted",
             Toast.LENGTH_SHORT).show();
       } else {
         permissions.request(Manifest.permission.READ_SMS);
       }
-    } else if (v == mAllButton) {
+    } else if (v.equals(mAllButton)) {
       if (permissions.hasPermission(ALL_PERMISSIONS)) {
         Toast.makeText(MainActivity.this, "all permissions already granted",
             Toast.LENGTH_SHORT).show();
