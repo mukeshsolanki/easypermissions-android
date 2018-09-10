@@ -63,15 +63,23 @@ Okay seems like you integrated the library in your project but **how do you use 
                                                })
                                            .build();
 ```
-This will create an object of the Runtime Permission class for you. To check if the app has a specific permission you can call `easyPermissions.hasPermission(String permission);` or if you want to check
-whether the app has multiple permission you can call `runtimePermission.hasPermission(String[] permissions)`. To request a permission at run time all you need to do is call `easyPermissions.request(String permission)` or if you want to request multiple permissions at the same time you call `easyPermissions.request(String[] permissions)`. However you will need to override a method on your activity inorder to wait for a callback from the library. Just add this to you activity.
 
+**Dont forget to override the onRequestPermissionsResult and pass teh result to the library like wise**
 ```
 @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
     super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     easyPermissions.onRequestPermissionsResult(permissions, grantResults);
   }
 ```
+
+### Check Permissions
+To check if the app already has permissions use
+* `easyPermissions.hasPermission(String Permissions)` - To check one permission at a time
+* `easyPermissions.hasPermission(String[] Permissions)` - To check multiple permissions at the same time
+
+### Request Permissions
+* `easyPermissions.request(String permission)` - To request one permission at a time
+* `easyPermissions.request(String[] permission)` - To request multiple permissions at the same time.
 
 That's pretty much it and your all wrapped up.
 
