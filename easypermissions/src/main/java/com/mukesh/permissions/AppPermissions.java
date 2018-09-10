@@ -6,6 +6,7 @@ import android.support.v4.app.ActivityCompat;
 import java.util.ArrayList;
 import java.util.List;
 
+@Deprecated
 public class AppPermissions {
   private Activity mActivity;
 
