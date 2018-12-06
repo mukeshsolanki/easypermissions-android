@@ -4,7 +4,7 @@
   <a href="https://jitpack.io/v/mukeshsolanki/easypermissions-android"><img src="https://jitpack.io/v/mukeshsolanki/easypermissions-android/month.svg"/></a>
   <a href="https://jitpack.io/#mukeshsolanki/easypermissions-android"> <img src="https://jitpack.io/v/mukeshsolanki/easypermissions-android.svg" /></a>
   <a href="https://circleci.com/gh/mukeshsolanki/easypermissions-android/tree/master"> <img src="https://circleci.com/gh/mukeshsolanki/easypermissions-android/tree/master.svg?style=shield" /></a>
-  <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"/></a>
   <br /><br />A simple library that will remove all the boilerplate code and speed up your work with new Runtime Permissions introduced in Android M.
 
 
