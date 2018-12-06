@@ -1,7 +1,7 @@
 <h1 align="center">Runtime Permission Library(Android)</h1>
 <p align="center">
   <a class="badge-align" href="https://www.codacy.com/app/mukeshsolanki/easypermissions-android?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mukeshsolanki/easypermissions-android&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/dd28ce7f922d4ad290c804283917f89d"/></a>
-  <a href="https://jitpack.io/#mukeshsolanki/liquidrefreshlayout"><img src="https://jitpack.io/v/mukeshsolanki/liquidrefreshlayout/month.svg"/></a>
+  <a href="https://github.com/mukeshsolanki/easypermissions-android"><img src="https://jitpack.io/v/mukeshsolanki/easypermissions-android/month.svg"/></a>
   <a href="https://jitpack.io/#mukeshsolanki/easypermissions-android"> <img src="https://jitpack.io/v/mukeshsolanki/easypermissions-android.svg" /></a>
   <a href="https://circleci.com/gh/mukeshsolanki/easypermissions-android/tree/master"> <img src="https://circleci.com/gh/mukeshsolanki/easypermissions-android/tree/master.svg?style=shield" /></a>
   <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
