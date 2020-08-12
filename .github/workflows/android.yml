@@ -1,4 +1,4 @@
-name: building
+name: Android Pull Request & Master CI
 
 on:
   pull_request:
