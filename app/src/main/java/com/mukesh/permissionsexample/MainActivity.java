@@ -2,11 +2,13 @@ package com.mukesh.permissionsexample;
 
 import android.Manifest;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.mukesh.permissions.EasyPermissions;
 import com.mukesh.permissions.OnPermissionListener;
 import java.util.List;

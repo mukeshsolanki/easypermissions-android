@@ -1,6 +1,7 @@
 package com.mukesh.permissions;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
+
 import java.util.List;
 
 public interface OnPermissionListener {
