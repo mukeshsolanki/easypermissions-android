@@ -3,7 +3,7 @@
   <a class="badge-align" href="https://www.codacy.com/app/mukeshsolanki/easypermissions-android?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mukeshsolanki/easypermissions-android&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/dd28ce7f922d4ad290c804283917f89d"/></a>
   <a href="https://jitpack.io/#mukeshsolanki/easypermissions-android"><img src="https://jitpack.io/v/mukeshsolanki/easypermissions-android/month.svg"/></a>
   <a href="https://jitpack.io/#mukeshsolanki/easypermissions-android"> <img src="https://jitpack.io/v/mukeshsolanki/easypermissions-android.svg" /></a>
-  <a href="https://github.com/mukeshsolanki/easypermissions-android/actions"> <img src="https://github.com/mukeshsolanki/easypermissions-android/workflows/Building/badge.svg" /></a>
+  <a href="https://github.com/mukeshsolanki/easypermissions-android/actions"> <img src="https://github.com/mukeshsolanki/easypermissions-android/workflows/Build/badge.svg" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"/></a>
   <br /><br />A simple library that will remove all the boilerplate code and speed up your work with new Runtime Permissions introduced in Android M.
 

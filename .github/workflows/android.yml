@@ -1,4 +1,4 @@
-name: Building
+name: Build
 
 on:
   pull_request:
